@@ -17,6 +17,7 @@ public class Multiple_windows {
         driver.get("https://rahulshettyacademy.com/angularpractice/");
         driver.switchTo().newWindow(WindowType.WINDOW);
 
+        //switching windows
         Set<String> handles= driver.getWindowHandles();
         Iterator<String> it= handles.iterator();
         String parent_id =it.next();
@@ -30,8 +31,12 @@ public class Multiple_windows {
         driver.findElement(By.name("name")).sendKeys(courseName);
 
         //screenshot for particular element
-        WebElement email=driver.findElement(By.name("name"));
-        File downaloadableFile=email.getScreenshotAs(OutputType.FILE);
+        WebElement name=driver.findElement(By.name("name"));
+        File downaloadableFile=name.getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(downaloadableFile,new File("logo.png"));
+
+        //height and width of element text box
+        System.out.println(name.getRect().getDimension().getHeight());
+        System.out.println(name.getRect().getDimension().getWidth());
     }
 }
