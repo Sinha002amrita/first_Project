@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE suite SYSTEM "http.testng.org/testng-1.0.dtd">
+<suite name="first_Project">
+    <parameter name="url" value="www.google.com"/>
+    <parameter name="Apikey" value="123465rt"/>
+    <test name = "Regression">
+        <classes>
+            <class name="TestNG.practicefile1">
+            <methods>
+                <include name="new.*"/>
+            </methods>
+            </class>
+            <class name= "TestNG.practicefile2">
+            <methods>
+               <exclude name="show"/>
+            </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

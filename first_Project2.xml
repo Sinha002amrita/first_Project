@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE suite SYSTEM "http.testng.org/testng-1.0.dtd">
+<suite name="first_Project">
+    <test name = "Regression">
+        <groups>
+            <run>
+            <include name="smoketest"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="TestNG.practicefile1"/>
+            <class name= "TestNG.practicefile2"/>
+
+
+        </classes>
+    </test>
+</suite>
